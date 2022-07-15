@@ -15,7 +15,7 @@ const btnNewGame = document.querySelector('.new__game')
 const btnSwitchPlayer = document.querySelector('.switch__player')
 
 const characters = [
-    "1", "2", // "3", "4", "5", "6", "7", "8", "9", "10"
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
 ]
 
 const createElement = (tag, className) => {
@@ -30,7 +30,7 @@ let secondCard = ""
 const checkEndGame = () =>{
     const disabledCards = document.querySelectorAll('.disabled-card')
     scoreboard.innerHTML = `Parabéns ${spanPlayer.innerHTML} seu tempo é de <span> ${h}h: ${m}m: ${s}s </span>`
-    if(disabledCards.length === 4){
+    if(disabledCards.length === 20){
         clearInterval(this.loop)
         modal.style.top = 0
         modal.style.opacity = 1
