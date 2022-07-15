@@ -44,7 +44,7 @@ const checkEndGame = () =>{
         })
 
         btnSwitchPlayer.addEventListener("click", () =>{
-            window.location = "/index.html"
+            window.location = "https://tiagoandradeweb.github.io/memorygame/index"
         })
     }
 }
