@@ -1,0 +1,167 @@
+body{
+    overflow-y: hidden;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../imagens/bg.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 40%;
+    background-color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.player{
+    color: #45AF35;
+}
+.timer{
+    color: #EC1A23;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 40%;
+}
+
+.card{
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    background-color: #f1f1f1;
+}
+
+.face{
+    border: 2px solid #f1f1f1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.back{
+    background-image: url('../imagens/back.jpg');
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.reveal-card{
+    transform: rotateY(180deg);
+}
+
+.disabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
+    transition: all 400ms ease;
+}
+
+/* Modal */
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -1000%;
+    bottom: 0;
+    left: 0;
+    background:  rgba(0, 0, 0, 0.74);
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease;
+}
+
+.modal__content{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+    border-radius: 8px;
+}
+
+.scoreboard{
+    color: #696969;
+    margin-bottom: 30px;
+}
+
+.scoreboard span{
+    color: #45AF35;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.modal__content img{
+    max-width: 250px;
+}
+
+.btn{
+    margin-top: 35px;
+    width: 120px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.ok{
+    background-color: #45AF35;
+}
+
+.ok:hover{
+    background-color: #329123;
+}
+
+.new__game{
+    background-color: #2D64AC;
+    margin: 0px 15px;
+}
+
+.new__game:hover{
+    background-color: #1b4d8d;
+}
+
+.switch__player{
+    background-color: #da0c16 ;
+}
+
+.switch__player:hover{
+    background-color: #b40c15;
+}
